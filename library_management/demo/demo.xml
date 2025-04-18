@@ -1,28 +1,28 @@
 <odoo>
 <data>
     <!-- demo user add to group      -->
-    <record id="base.user_demo" model="res.users">
-        <field name="groups_id" eval="[(4, ref('library_management.group_library_user'))]"/>
-    </record>
+    <!-- <record id="base.user_demo" model="res.users"> -->
+    <!--     <field name="groups_id" eval="[(4, ref('library_management.group_library_user'))]"/> -->
+    <!-- </record> -->
     <!-- Members -->
-    <record id="member_1" model="library.member">
-        <field name="name">John Doe</field>
-        <field name="email">jd@mail.com</field>
-        <field name="phone" eval="False"/>
-        <field name="membership_date">2025-04-16</field>
-    </record>
-    <record id="member_2" model="library.member">
-        <field name="name">Robert Musk</field>
-        <field name="email">rm@mail.com</field>
-        <field name="phone" eval="False"/>
-        <field name="membership_date">2025-04-15</field>
-    </record>
-    <record id="member_3" model="library.member">
-        <field name="name">Paul Holmes</field>
-        <field name="email">ph@mail.com</field>
-        <field name="phone" eval="False"/>
-        <field name="membership_date">2025-04-14</field>
-    </record>
+    <!-- <record id="member_1" model="library.member"> -->
+    <!--     <field name="name">John Doe</field> -->
+    <!--     <field name="email">jd@mail.com</field> -->
+    <!--     <field name="phone" eval="False"/> -->
+    <!--     <field name="membership_date">2025-04-16</field> -->
+    <!-- </record> -->
+    <!-- <record id="member_2" model="library.member"> -->
+    <!--     <field name="name">Robert Musk</field> -->
+    <!--     <field name="email">rm@mail.com</field> -->
+    <!--     <field name="phone" eval="False"/> -->
+    <!--     <field name="membership_date">2025-04-15</field> -->
+    <!-- </record> -->
+    <!-- <record id="member_3" model="library.member"> -->
+    <!--     <field name="name">Paul Holmes</field> -->
+    <!--     <field name="email">ph@mail.com</field> -->
+    <!--     <field name="phone" eval="False"/> -->
+    <!--     <field name="membership_date">2025-04-14</field> -->
+    <!-- </record> -->
 
     <!-- Books -->
     <record id="book_1" model="library.book">
@@ -62,28 +62,28 @@
     </record>
 
     <!-- Loans -->
-    <record id="loan_1" model="library.loan">
-        <field name="member_id" ref="member_1"/>
-        <field name="book_id" ref="book_1"/>
-        <field name="loan_date">2025-04-20</field>
-        <field name="return_date" eval="False"/>
-    </record>
-    <record id="loan_2" model="library.loan">
-        <field name="member_id" ref="member_2"/>
-        <field name="book_id" ref="book_5"/>
-        <field name="loan_date">2025-04-20</field>
-        <field name="return_date" eval="False"/>
-    </record>
-    <record id="loan_3" model="library.loan">
-        <field name="member_id" ref="member_3"/>
-        <field name="book_id" ref="book_2"/>
-        <field name="loan_date">2025-04-10</field>
-        <field name="return_date">2025-04-15</field>
-    </record>
-
+    <!-- <record id="loan_1" model="library.loan"> -->
+    <!--     <field name="member_id" ref="member_1"/> -->
+    <!--     <field name="book_id" ref="book_1"/> -->
+    <!--     <field name="loan_date">2025-04-20</field> -->
+    <!--     <field name="return_date" eval="False"/> -->
+    <!-- </record> -->
+    <!-- <record id="loan_2" model="library.loan"> -->
+    <!--     <field name="member_id" ref="member_2"/> -->
+    <!--     <field name="book_id" ref="book_5"/> -->
+    <!--     <field name="loan_date">2025-04-20</field> -->
+    <!--     <field name="return_date" eval="False"/> -->
+    <!-- </record> -->
+    <!-- <record id="loan_3" model="library.loan"> -->
+    <!--     <field name="member_id" ref="member_3"/> -->
+    <!--     <field name="book_id" ref="book_2"/> -->
+    <!--     <field name="loan_date">2025-04-10</field> -->
+    <!--     <field name="return_date">2025-04-15</field> -->
+    <!-- </record> -->
+    <!---->
     <!-- Update book_2 state to available after returned loan -->
-    <record id="book_2" model="library.book">
-        <field name="state">available</field>
-    </record>
+    <!-- <record id="book_2" model="library.book"> -->
+    <!--     <field name="state">available</field> -->
+    <!-- </record> -->
 </data>>
 </odoo>

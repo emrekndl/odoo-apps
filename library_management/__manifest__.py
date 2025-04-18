@@ -15,6 +15,7 @@
     "data": [
         "security/library_security.xml",
         "security/ir.model.access.csv",
+        "security/library_record_rules.xml",
         "data/add_user_to_group.xml",
         "views/library_book_views.xml",
         "views/library_member_views.xml",
