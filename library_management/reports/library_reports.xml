@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <!-- <record id="report_library_book_report" model="report"> -->
+        <!--     <field name="name">Library Book Report</field> -->
+        <!--     <field name="model">library.book</field> -->
+        <!--     <field name="report_type">qweb-pdf</field> -->
+        <!--     <field name="report_file">library_book_report</field> -->
+        <!-- </record> -->
+    </data>
+</odoo>

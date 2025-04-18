@@ -1,0 +1,26 @@
+<odoo>
+
+    <!-- Action definitions -->
+    <record id="action_library_books" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_library_loans" model="ir.actions.act_window">
+        <field name="name">Loans</field>
+        <field name="res_model">library.loan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_library_members" model="ir.actions.act_window">
+        <field name="name">Members</field>
+        <field name="res_model">library.member</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu definitions -->
+    <menuitem id="menu_library_root" name="Library Management"/>
+    <menuitem id="menu_library_book" name="Books" parent="menu_library_root" action="action_library_books"/>
+    <menuitem id="menu_library_loan" name="Loans" parent="menu_library_root" action="action_library_loans"/>
+    <menuitem id="menu_library_member" name="Members" parent="menu_library_root" action="action_library_members"/>
+    
+</odoo>

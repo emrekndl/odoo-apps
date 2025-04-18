@@ -1,0 +1,89 @@
+<odoo>
+<data>
+    <!-- demo user add to group      -->
+    <record id="base.user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('library_management.group_library_user'))]"/>
+    </record>
+    <!-- Members -->
+    <record id="member_1" model="library.member">
+        <field name="name">John Doe</field>
+        <field name="email">jd@mail.com</field>
+        <field name="phone" eval="False"/>
+        <field name="membership_date">2025-04-16</field>
+    </record>
+    <record id="member_2" model="library.member">
+        <field name="name">Robert Musk</field>
+        <field name="email">rm@mail.com</field>
+        <field name="phone" eval="False"/>
+        <field name="membership_date">2025-04-15</field>
+    </record>
+    <record id="member_3" model="library.member">
+        <field name="name">Paul Holmes</field>
+        <field name="email">ph@mail.com</field>
+        <field name="phone" eval="False"/>
+        <field name="membership_date">2025-04-14</field>
+    </record>
+
+    <!-- Books -->
+    <record id="book_1" model="library.book">
+        <field name="name">1984</field>
+        <field name="author">George Orwell</field>
+        <field name="isbn">978-605-303-408-7</field>
+        <field name="date_published">1949-06-08</field>
+        <field name="state">available</field>
+    </record>
+    <record id="book_2" model="library.book">
+        <field name="name">The Call of the Wild</field>
+        <field name="author">Jack London</field>
+        <field name="isbn">978-9944-260-20-6</field>
+        <field name="date_published">1903-12-15</field>
+        <field name="state">available</field>
+    </record>
+    <record id="book_3" model="library.book">
+        <field name="name">Moby-Dick</field>
+        <field name="author">Herman Melville</field>
+        <field name="isbn">123-1345-345-67-3</field>
+        <field name="date_published">1851-02-11</field>
+        <field name="state">available</field>
+    </record>
+    <record id="book_4" model="library.book">
+        <field name="name">The Lord of the Rings</field>
+        <field name="author">J. R. R. Tolkien</field>
+        <field name="isbn">1231-312-123-32-1</field>
+        <field name="date_published">1954-06-09</field>
+        <field name="state">available</field>
+    </record>
+    <record id="book_5" model="library.book">
+        <field name="name">One Hundred Years of Solitude</field>
+        <field name="author">Gabriel García Márquez</field>
+        <field name="isbn">123-12312-456-87-8</field>
+        <field name="date_published">1967-07-03</field>
+        <field name="state">available</field>
+    </record>
+
+    <!-- Loans -->
+    <record id="loan_1" model="library.loan">
+        <field name="member_id" ref="member_1"/>
+        <field name="book_id" ref="book_1"/>
+        <field name="loan_date">2025-04-20</field>
+        <field name="return_date" eval="False"/>
+    </record>
+    <record id="loan_2" model="library.loan">
+        <field name="member_id" ref="member_2"/>
+        <field name="book_id" ref="book_5"/>
+        <field name="loan_date">2025-04-20</field>
+        <field name="return_date" eval="False"/>
+    </record>
+    <record id="loan_3" model="library.loan">
+        <field name="member_id" ref="member_3"/>
+        <field name="book_id" ref="book_2"/>
+        <field name="loan_date">2025-04-10</field>
+        <field name="return_date">2025-04-15</field>
+    </record>
+
+    <!-- Update book_2 state to available after returned loan -->
+    <record id="book_2" model="library.book">
+        <field name="state">available</field>
+    </record>
+</data>>
+</odoo>

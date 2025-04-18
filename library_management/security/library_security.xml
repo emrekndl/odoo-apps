@@ -1,0 +1,14 @@
+<odoo>
+    <!-- Library Manager Group -->
+    <record id="group_library_manager" model="res.groups">
+        <field name="name">Library Manager</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+    
+    <!-- Library User Group -->
+    <record id="group_library_user" model="res.groups">
+        <field name="name">Library User</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>
+

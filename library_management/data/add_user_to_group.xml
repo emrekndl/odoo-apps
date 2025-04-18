@@ -1,0 +1,7 @@
+<odoo>
+  <record id="base.user_admin" model="res.users">
+    <!-- (4, <group_xml_id>) = add exist group -->
+    <field name="groups_id" eval="[(4, ref('library_management.group_library_manager'))]"/>
+  </record>
+</odoo>
+
