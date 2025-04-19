@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Paper page format -->
+    <record id="paperformat_a4" model="report.paperformat">
+        <field name="name">A4-lib</field>
+        <!-- <field name="default" eval="True"/> -->
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">20</field>
+    </record>
+
+    <!-- Report Print -->
+    <record id="action_report_library_members" model="ir.actions.report">
+        <field name="name">Member Report</field>
+        <field name="model">library.member</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">library_management.report_library_members</field>
+        <field name="report_file">library_management.report_library_members</field>
+        <field name="binding_model_id" ref="model_library_member"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="library_management.paperformat_a4"/>
+    </record>
+
+
+
+    <!-- <report -->
+    <!--     id="action_report_library_members" -->
+    <!--     model="library.member" -->
+    <!--     string="Member Report" -->
+    <!--     report_type="qweb-pdf" -->
+    <!--     name="library_management.report_library_members" -->
+    <!--     file="library_management.report_library_members" -->
+    <!--     menu="True" -->
+    <!--     /> -->
+
+</odoo>

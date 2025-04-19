@@ -15,7 +15,7 @@ class LibraryMember(models.Model):
         help="The Odoo user linked to the member.",
     )
     email = fields.Char(string="Email", related="user_id.email", readonly=True)
-    phone = fields.Char(string="Phone", releated="user.phone", readonly=True)
+    # phone = fields.Char(string="Phone", releated="user.phone", readonly=True)
     membership_date = fields.Date(
         string="Membership Date", default=fields.Date.context_today
     )

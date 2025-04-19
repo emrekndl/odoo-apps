@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_library_member_form" model="ir.ui.view">
         <field name="name">library.member.form</field>
@@ -8,7 +9,6 @@
                     <group>
                         <field name="user_id"/>
                         <field name="email" />
-                        <field name="phone" />
                         <field name="membership_date"/>
                     </group>
                 </sheet>
@@ -28,7 +28,7 @@
             <tree string="Member List">
                 <field name="user_id"/>
                 <field name="email"/>
-                <field name="phone" optional="hide"/>
+                <!-- <field name="phone" optional="hide"/> -->
                 <field name="membership_date"/>
             </tree>
         </field>
