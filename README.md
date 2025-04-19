@@ -1,11 +1,8 @@
 # Odoo Custom Modules Repository
 
 ![Odoo Version](https://img.shields.io/badge/Odoo-17.0-%23FF0000?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-green)
 
-This repository contains custom Odoo modules for various business needs.  
- **Key Features**: Library Management, ...
+This repository contains custom Odoo modules for various business needs.
 
 ---
 
@@ -27,11 +24,10 @@ Manage books, members, and loans with ease.
 ## Installation
 
 1. **Clone Repository**:
+
    ```bash
    git clone https://github.com/emrekndl/odoo-apps.git
    ```
-
-```
 
 2. **Install Modules**:
 
@@ -64,4 +60,7 @@ License
 Distributed under the MIT License. See `LICENSE` for details.
 
 ---
+
+```
+
 ```
