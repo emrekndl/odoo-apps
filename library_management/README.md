@@ -61,9 +61,9 @@ Place the `/odoo-apps/library_management` folder in your Odoo addons directory.
 
 ## Screenshots
 
-| Members List                        | Loan Form                       |
-| ----------------------------------- | ------------------------------- |
-| ![Members](screenshots/members.png) | ![Loans](screenshots/loans.png) |
+| Members List                     | Loan Form                      |
+| -------------------------------- | ------------------------------ |
+| ![Members](screenshots/lib2.png) | ![Loans](screenshots/lib3.png) |
 
 ## Security Rules
 

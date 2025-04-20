@@ -17,7 +17,7 @@ Manage books, members, and loans with ease.
 - Book availability tracking
 - Loan period management
 - User-specific access rules  
-  **Screenshots**: [Library Members](screenshots/library_members.png) | [Loans](screenshots/loans.png)
+  **Screenshots**: [Library Members](library_management/screenshots/lib2.png) | [Loans](library_managemnt/screenshots/lib3.png) | [Books](library_managemnt/screenshots/lib1.png)
 
 ---
 
@@ -43,7 +43,7 @@ Manage books, members, and loans with ease.
 
 | Library Management               |
 | -------------------------------- |
-| ![Library](screenshots/lib1.png) |
+| ![Library](library_managemnt/screenshots/lib1.png) |
 
 ---
 
