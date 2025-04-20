@@ -12,6 +12,9 @@ class LibraryLoan(models.Model):
     book_id = fields.Many2one("library.book", string="Book", required=True)
     loan_date = fields.Date(string="Loan Date", default=fields.Date.context_today)
     return_date = fields.Date(string="Return Date")
+    days_taken = fields.Integer(
+        string="Days Taken", compute="_compute_days_taken", store=True
+    )
 
     @api.constrains("book_id")
     def _check_book_availability(self):
@@ -29,3 +32,28 @@ class LibraryLoan(models.Model):
         for loan in self:
             loan.book_id.state = "available"
             loan.return_date = fields.Date.context_today(self)
+            # loan.return_date = fields.Date.context_today(loan)
+            loan._compute_days_taken()
+            template = self.env.ref("library_management.mail_template_return_thanks")
+            if template:
+                template.sudo().send_mail(loan.id, force_send=True)
+
+    @api.depends("loan_date", "return_date")
+    def _compute_days_taken(self):
+        for rec in self:
+            if rec.return_date and rec.loan_date:
+                rec.days_taken = (rec.return_date - rec.loan_date).days
+            else:
+                rec.days_taken = 0
+
+    def send_overdue_reminders(self):
+        overdue_loans = self.search(
+            [
+                ("return_date", "<", fields.Date.context_today(self)),
+                ("book_id.state", "=", "loaned"),
+            ]
+        )
+        template = self.env.ref("library_management.mail_template_overdue_reminder")
+        for loan in overdue_loans:
+            if template:
+                template.sudo().send_mail(loan.id, force_send=True)

@@ -38,6 +38,7 @@
                 <field name="member_id"/>
                 <field name="book_id"/>
                 <field name="loan_date" optional="hide"/>
+                <field name="days_taken" optional="hide"/>
                 <field name="return_date"/>
             </tree>
         </field>
