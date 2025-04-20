@@ -21,7 +21,6 @@
         "views/library_member_views.xml",
         "views/library_loan_views.xml",
         "views/library_menu.xml",
-        "views/templates.xml",
         "reports/library_member_templates.xml",
         "reports/library_member_reports.xml",
     ],
