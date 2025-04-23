@@ -1,18 +1,23 @@
 <odoo>
-  <data noupdate="1">
-    <record id="mail_template_return_thanks" model="mail.template">
-      <field name="name">Return Thank You</field>
-      <field name="model_id" ref="library_management.model_library_loan"/>
-      <field name="email_from">${(user.email_formatted or '')|safe}</field>
-      <field name="email_to">${object.member_id.user_id.email|safe}</field>
-      <field name="subject">Thanks for returning “${object.book_id.name}”!</field>
-      <field name="body_html"><![CDATA[
-        <p>Dear ${object.member_id.name},</p>
-        <p>Thank you for returning the book <strong>${object.book_id.name}</strong> after 
-           <strong>${object.days_taken}</strong> days.</p>
-        <p>We hope you enjoyed reading it!</p>
-      ]]></field>
-    </record>
-  </data>
+    <data noupdate="0">
+        <record id="mail_template_return_thanks" model="mail.template">
+            <field name="name">Return Thank You</field>
+            <field name="model_id" ref="library_management.model_library_loan"/>
+            <field name="email_from">{{(user.email_formatted or object.member_id.user_id.email_formatted)}}</field>
+            <field name="email_to">{{object.member_id.email}}</field>
+            <field name="subject">Thanks for returning “{{object.book_id.name}}”!</field>
+            <field name="body_html" type="html">
+
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <t t-out="object.member_id.user_id.name or ''"></t> <br/><br/>
+                        Thank you for returning the book <strong><t t-out="object.book_id.name or ''"> </t></strong>  after 
+                        <strong><t t-out="object.days_taken or ''"> </t></strong> days.<br/><br/>
+                        We hope you enjoyed reading it!
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
 </odoo>
 
