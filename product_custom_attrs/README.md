@@ -33,7 +33,7 @@ Place the `/odoo-apps/product_custom_attrs` folder in your Odoo addons directory
 
 | Create Product Variants         | Product Variants List         |
 | ------------------------------- | ----------------------------- |
-| ![Create](screenshots/img2.png) | ![List](screenshots/img2.png) |
+| ![Create](screenshots/img2.png) | ![List](screenshots/img1.png) |
 
 **InheritProductProduct**:
 

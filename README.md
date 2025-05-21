@@ -16,9 +16,10 @@ Manage books, members, and loans with ease.
 - Member-User synchronization
 - Book availability tracking
 - Loan period management
-- User-specific access rules  
-  **Screenshots**:
-  | ![Library Members](library_management/screenshots/lib2.png) | ![Loans](library_management/screenshots/lib3.png) | ![Books](library_management/screenshots/lib1.png) |
+- User-specific access rules
+
+**Screenshots**:
+| ![Library Members](library_management/screenshots/lib2.png) | ![Loans](library_management/screenshots/lib3.png) | ![Books](library_management/screenshots/lib1.png) |
 
 ### 2. **Prodcut Variants Custom Fields Module**
 
@@ -28,8 +29,9 @@ Product Variants inherited and added custom fields.
 - supplier_code field.
 - qr_code computed field.
 - markup field(only in product template)
-  **Screenshots**:
-  | ![List](product_custom_attrs/screenshots/img1.png) | ![Create](product_custom_attrs/screenshots/img2.png) |
+
+**Screenshots**:
+| ![List](product_custom_attrs/screenshots/img1.png) | ![Create](product_custom_attrs/screenshots/img2.png) |
 
 ---
 
