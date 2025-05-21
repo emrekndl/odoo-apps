@@ -18,7 +18,7 @@ Manage books, members, and loans with ease.
 - Loan period management
 - User-specific access rules  
   **Screenshots**:
-  | ![Library Members](library_management/screenshots/lib2.png) | ![Loans](library_managemnt/screenshots/lib3.png) | ![Books](library_managemnt/screenshots/lib1.png) |
+  | ![Library Members](library_management/screenshots/lib2.png) | ![Loans](library_management/screenshots/lib3.png) | ![Books](library_management/screenshots/lib1.png) |
 
 ### 2. **Prodcut Variants Custom Fields Module**
 
