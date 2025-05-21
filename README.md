@@ -20,6 +20,17 @@ Manage books, members, and loans with ease.
   **Screenshots**:
   | ![Library Members](library_management/screenshots/lib2.png) | ![Loans](library_managemnt/screenshots/lib3.png) | ![Books](library_managemnt/screenshots/lib1.png) |
 
+### 2. **Prodcut Variants Custom Fields Module**
+
+Product Variants inherited and added custom fields.
+**Features**:
+
+- supplier_code field.
+- qr_code computed field.
+- markup field(only in product template)
+  **Screenshots**:
+  | ![List](product_custom_attrs/screenshots/img1.png) | ![Create](product_custom_attrs/screenshots/img2.png) |
+
 ---
 
 ## Installation
@@ -37,14 +48,6 @@ Manage books, members, and loans with ease.
 
 3. **Enable in Odoo**:
    - Go to `Apps` → Search module name → Install.
-
----
-
-## Screenshots
-
-| Library Management                                 |
-| -------------------------------------------------- |
-| ![Library](library_managemnt/screenshots/lib1.png) |
 
 ---
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!-- Product Variants Views(product.product) -->
+    <record id="view_product_product_form_inherit" model="ir.ui.view">
+        <field name="name">product.product.form.inherit.product.custom.attrs</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_tag_ids']" position="after">
+                <field name="supplier_code"/>
+                <!-- <field name="supplier_code" position="attributes"> -->
+                    <!-- FIXME: in validation adding a dynamic class -->
+                    <!-- <attribute name="class"  -->
+                    <!--     add="o_field_invalid"  -->
+                    <!--     eval="not record.supplier_code or not record.supplier_code.isdigit()"/> -->
+                    <!-- <attribute name="attrs"> -->
+                        <!--     {'class': [ -->
+                        <!--     ('supplier_code', 'not ilike', '^[0-9]+$'), -->
+                        <!--     'o_field_invalid', -->
+                        <!--     '' -->
+                        <!--     ]} -->
+                        <!-- </attribute> -->
+                <!-- </field> -->
+                <field name="markup"/>
+                <field name="qrcode" widget='image' class="oe_avatar"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_product_tree_inherit" model="ir.ui.view">
+        <field name="name">product.product.tree.inherit.product.custom.attrs</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_tag_ids']" position="after">
+                <field name="supplier_code" invisible="supplier_code == False"/>
+                <field name="markup" invisible="markup == False"/>
+                <field name="qrcode" widget='image' class="oe_avatar" invisible="qrcode == False"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_product_kanban_inherit" model="ir.ui.view">
+        <field name="name">product.product.kanban.inherit.product.custom.attrs</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='product_lst_price']" position="after">
+                <div class="o_kanban_record_bottom">
+                    <div class="oe_kanban_bottom_left">
+                        <t t-if="record.supplier_code.value">
+                            <div>
+                                <p>
+                                    SPCode: <field name="supplier_code"/>
+                                </p>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="oe_kanban_bottom_right">
+                        <t t-if="record.markup.raw_value">
+                            <div>
+                                <p>
+                                    Markup: <field name="markup"/>
+                                </p>
+                            </div>
+                        </t>
+                    </div>
+                </div> 
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

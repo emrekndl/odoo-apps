@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!-- Product Views(product.template) -->
+    <record id="view_product_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.product.custom.attrs</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_tag_ids']" position="after">
+            <!-- <field name="supplier_code"/> -->
+                <field name="markup"/>
+                <!-- <field name="qrcode" widget='image' class="oe_avatar"/> -->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_template_tree_inherit" model="ir.ui.view">
+        <field name="name">product.template.tree.inherit.product.custom.attrs</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_tag_ids']" position="after">
+                <!-- <field name="supplier_code" invisible="supplier_code == False"/> -->
+                <field name="markup" invisible="markup == False"/>
+                <!-- <field name="qrcode" widget='image' class="oe_avatar" invisible="qrcode == False"/> -->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_template_kanban_inherit" model="ir.ui.view">
+        <field name="name">product.template.kanban.inherit.product.custom.attrs</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='list_price']" position="after">
+                <div class="o_kanban_record_bottom">
+                    <!-- <div class="oe_kanban_bottom_left"> -->
+                    <!--     <t t-if="record.supplier_code.value"> -->
+                    <!--         <div> -->
+                    <!--             <p> -->
+                    <!--                 SPCode: <field name="supplier_code"/> -->
+                    <!--             </p> -->
+                    <!--         </div> -->
+                    <!--     </t> -->
+                    <!-- </div> -->
+                    <div class="oe_kanban_bottom_right">
+                        <t t-if="record.markup.raw_value">
+                            <div>
+                                <p>
+                                    Markup: <field name="markup"/>
+                                </p>
+                            </div>
+                        </t>
+                    </div>
+                </div> 
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
